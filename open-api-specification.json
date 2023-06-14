@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "path": "/login",
+      "component": "Login",
+      "method": "POST",
+      "description": "User login",
+      "data": [
+        {
+          "name": "email",
+          "type": "string",
+          "format":"email",
+          "required": true,
+          "description": "User's username"
+        },
+        {
+          "name": "password",
+          "type": "string",
+          "format":"password",
+          "required": true,
+          "description": "User's password"
+        },
+        {
+          "name": "password confirmation",
+          "type": "string",
+          "format":"password",
+          "required": true,
+          "description": "User's password.It must match the password"
+        }
+      ]
+    },
+    {
+      "path": "/signup",
+      "component": "Signup",
+      "method": "POST",
+      "description": "User signup",
+      "data": [
+        {
+          "name": "email",
+          "type": "string",
+          "format":"email",
+          "required": true,
+          "description": "User's username"
+        },
+        {
+          "name": "password",
+          "type": "string",
+          "format":"password",
+          "required": true,
+          "description": "User's password"
+        },
+        {
+          "name": "company" ,
+          "type": "string",
+          "description": "Users Company. It's predefined as 'FH Technikum Wien' and cannot be changed."
+        },
+    	{"name":"street",
+	 "type": "string",
+	 "description": "Street of users adresse"
+    	},
+    	{
+    	 "name":"city",
+	 "type": "string",
+	 "description": "City of usres adresse."
+    	},
+    	{
+    	 "name":"postalCode",
+	 "type": "string",
+	 "pattern": "[0-9]*",
+	 "description": "Postal Code of users adresse. Must be numeric."
+    	}
+      ]
+    }
+  ]
+}
+

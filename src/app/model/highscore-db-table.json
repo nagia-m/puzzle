@@ -1,0 +1,39 @@
+
+{
+  "highScore": {
+    "user": {
+      "type": "String",
+      "required": true
+    },
+    "score": {
+      "type": "Number",
+      "required": true
+    },
+    "createdAt": {
+      "type": "Date",
+      "default": "Date.now"
+    }
+  },
+  "highScoreList": {
+    "scores": {
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "user": {
+            "type": "String",
+            "required": true
+          },
+          "score": {
+            "type": "Number",
+            "required": true
+          },
+          "createdAt": {
+            "type": "Date",
+            "default": "Date.now"
+          }
+        }
+      }
+    }
+  }
+}

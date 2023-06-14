@@ -1,0 +1,28 @@
+<div class = "container">
+    <h2>Sign up</h2>
+    <form [formGroup]="signUp">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>enter your email</mat-label>
+          <input matInput type="email" formControlName="email" required>
+        </mat-form-field>
+      </div>
+      <div formGroupName="passwort">
+          <div>
+              <mat-form-field appearance="fill">
+              <mat-label>enter a password</mat-label>
+              <input matInput type="password" formControlName="password" required>
+              </mat-form-field>
+          </div>    
+          <div>
+              <mat-form-field appearance="fill">
+                <mat-label>confirm your passwort</mat-label>
+                <input matInput type="password" formControlName="passwordConfirm" required>
+              </mat-form-field>
+          </div>
+      </div>
+      <div>
+        <button>submit</button>
+      </div>
+  </form>
+  </div>
